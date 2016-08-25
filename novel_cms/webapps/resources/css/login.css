@@ -1,0 +1,90 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family:"微软雅黑","Microsoft YaHei","Times New Roman",sans-serif,Serif;
+    background-color: #02314d;
+}
+.header{
+    height:299px;
+    background-color: #c3e9ff;
+    border-bottom:1px solid #FFF;
+    text-align: center;
+}
+.header .logo{
+    font-family:"Microsoft YaHei",sans-serif;
+    font-size: 72px;
+    background-color: inherit;
+    color:#02314d;
+    margin: 0 auto;
+    padding-top:167px;
+}
+
+.login{
+    margin:0 auto;
+    width:652px;
+    height:333px;
+    background-color: #02314d;
+}
+
+.login .left{
+    display:inline-block;
+    width:12px;
+    height:333px;
+    background: url(../img/bg_l.png) no-repeat ;
+}
+.login .center{
+    position: relative;
+    display:inline-block;
+    width:628px;
+    height:333px;
+    background: url(../img/bg_c.png) repeat-x ;
+}
+.login .right{
+    display:inline-block;
+    width:12px;
+    height:333px;
+    background: url(../img/bg_r.png) no-repeat ;
+}
+
+#loginForm {
+    position: absolute;
+    top:70px;
+    left:50%;
+    margin-left:-110px;
+    font-size: 18px;
+    font-family:"Microsoft YaHei",sans-serif;
+    color:#666;
+}
+
+#loginForm input {
+    width:220px;
+    height: 45px;
+    display: block;
+    border:0;
+    border-radius:5px;
+    padding:0 15px;
+}
+
+#loginForm input[type=password] {
+    margin-top:16px;
+}
+
+#loginForm input[type=submit] {
+    margin-top:26px;
+    padding:0;
+    color:#FFF;
+    background: url(../img/btn_submit.png) no-repeat ;
+}
+
+#msg {
+    display: none;
+    position: absolute;
+    bottom:30px;
+    left:50%;
+    margin-left:-40px;
+    font-size: 18px;
+    font-family:"Microsoft YaHei",sans-serif;
+    color:#ff5c69;
+}

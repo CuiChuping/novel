@@ -1,0 +1,66 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.microc.novel.basic.mapper.BooksMapper">
+	
+	<sql id="columns">
+		id, name, category_id as categoryId, author, word_count as wordCount, update_date as updateDate, status, file_path as filePath, image_path as imagePath, `desc`
+	</sql>
+	
+	<insert id="insert">
+		insert into t_books values(#{id}, #{name}, #{categoryId}, #{author}, #{wordCount}, now(), #{status}, #{filePath}, #{imagePath}, #{desc});
+	</insert>
+	
+	<delete id="delete">
+		delete from t_books where id = #{id};
+	</delete>
+	
+	<update id="update">
+		update t_books set
+			`name` = #{name},
+			`category_id` = #{categoryId}, 
+			`author` = #{author}, 
+			`word_count` = #{wordCount}, 
+			`update_date` = now(), 
+			`status` = #{status}, 
+			`file_path` = #{filePath}, 
+			`image_path` = #{imagePath}, 
+			`desc` = #{desc}
+		where id = #{id}
+	</update>
+	
+	<select id="findById" resultType="com.microc.novel.basic.model.db.DBBooks">
+		select <include refid="columns" /> from t_books where id = #{id}
+	</select>
+	
+	<select id="listByCategory" resultType="com.microc.novel.basic.model.db.DBBooks">
+		select <include refid="columns" /> from t_books
+		<where>
+			<if test="categoryId != null and categoryId != ''">
+				category_id = #{categoryId}
+			</if>
+			<if test="name != null and name != ''">
+				and name = concat('%', concat(#{name}, '%'));
+			</if>
+		</where>
+		<if test="skip != null and length != null">
+			limit #{skip}, #{length}
+		</if>
+	</select>
+	
+	<select id="countByCategory" resultType="integer">
+		select count(*) from t_books
+		<where>
+			<if test="categoryId != null and categoryId != ''">
+				category_id = #{categoryId}
+			</if>
+			<if test="name != null and name != ''">
+				and name = concat('%', concat(#{name}, '%'));
+			</if>
+		</where>
+	</select>
+	
+	<!-- 意见反馈 -->
+	<insert id="suggestionSubmit">
+		insert into t_suggestion 
+		values(#{id}, #{contactWay}, #{suggestion}, #{createTime});
+	</insert>
+</mapper> 

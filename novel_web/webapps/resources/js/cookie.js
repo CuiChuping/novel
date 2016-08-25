@@ -1,0 +1,4 @@
+/**
+ * @author cuichuping
+ */
+var DB = (function($) { "use strict"; $.cookie.json = true; var _get = function(name) { return $.cookie(name); }; var _set = function(name, value) { $.cookie(name, value, { expires: 365, path: '/' }); }; var _addToSet = function(name, value) { var arr = $.cookie(name) || []; if(arr.indexOf(value) == -1) { arr.push(value); _set(name, arr); } }; var _pull = function(name, value) { var arr = $.cookie(name); if(arr.indexOf(value) != -1) { arr = arr.filter(function(elem) {return elem != value}); _set(name, arr); } }; var _push = function(name, value) { var arr = $.cookie(name); arr.push(value); _set(name, arr); }; var _pop = function(name) { var arr = $.cookie(name); var value = arr.pop(); _set(name, arr); return value; }; return { get: _get, set: _set, addToSet: _addToSet, pull: _pull, push: _push, pop: _pop }; })($);

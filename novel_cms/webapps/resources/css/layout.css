@@ -1,0 +1,295 @@
+/*样式*/
+html, body{
+    background-color: #dde7ef;
+}
+/*头部*/
+.header{
+    border-bottom: #cccccc;
+    background-color:#F5F5F5;
+    height:75px;
+}
+.header .header-left{
+    width:220px;
+    height:75px;
+    background-color: #02314d;
+    text-align: center;
+    font-size: 56px;
+    line-height: 75px;
+    color:#000000;
+}
+.header .header-right{
+    position: relative;
+    height:75px;
+    background-color:#3A6984;
+}
+.header .header-right .logo{
+
+    width:160px;
+    height:75px;
+    text-align: center;
+    font-size: 56px;
+    line-height: 75px;
+    color:#000000;
+}
+
+.header .header-right .usrDiv{
+    /*padding-left:10px;
+    padding-top:5px;*/
+    margin-left:180px;
+    margin-top:-74px;
+    height:32px;
+    line-height:32px;
+    color:#bbb;
+}
+.header .header-right .manager{
+    margin-left:180px;
+    /* margin-top:-32px;
+     height:42px;*/
+
+}
+.header .header-right .manager ul.nav.nav-tabs a{
+    font-size:16px;
+    color: rgb(176, 176, 176);
+    font-family: "微软雅黑", "Microsoft YaHei", "Times New Roman", sans-serif, Serif;
+}
+.header .header-right .manager .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    background-color: #dde7ef;
+    color:#333;
+}
+
+
+.header  .header-right .qudao{
+    position: absolute;
+    right: 80px;
+    top:26px;
+}
+.header  .header-right .usrDiv img{
+    /*margin-right:18px;*/
+}
+.header .username{
+    font-size: 14px;
+    color: #bbb;
+}
+.none-margin{
+    margin:0 !important;
+}
+.container-fluid{
+    margin-top:10px;
+}
+.main_content{
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+}
+/*左边导航*/
+.left_nav{
+    width:220px;
+    height: 850px;
+    background: #5d7f93;
+    margin-left:5px;
+    margin-right:5px;
+    border:4px solid #2b638c;
+    border-radius:5px;
+}
+
+.left_nav #accordion .myPanel{
+    border:0;
+    margin-top: 0;
+    background-color: #5d7f93;
+}
+.left_nav .primary-menu {
+    height:35px;
+    padding-top:0;
+    padding-bottom:0;
+    padding-left:30px;
+}
+.left_nav .primary-menu img{
+    padding-top:12px;
+    padding-bottom: 11px;
+    display: inline-block;
+}
+.left_nav .primary-menu h4{
+    display: inline-block;
+    font-size: 14px;
+}
+.left_nav  .primary-menu a {
+    padding-top:10px;
+    padding-bottom:10px;
+    width:145px;
+    display:inline-block;
+    padding-left: 20px;
+}
+
+.left_nav .subMenu {
+    background-color: #cce0eb;
+}
+.left_nav #accordion .subMenu .panel-body{
+    padding:0;
+    border-top-color:#FFF;
+}
+.left_nav .subMenu ul li{
+    list-style: none;
+    color:#5d7f93;
+    cursor:pointer;
+    height:30px;
+    line-height: 30px;
+}
+.left_nav .subMenu ul li.activeStyle{
+    background: url(../img/arrow03.png) center right no-repeat;
+    color:#02314d;
+}
+.left_nav .NavToggle{
+    width:220px;
+    height: 24px;
+    position: relative;
+    background: url(../img/line01.png);
+}
+.left_nav .NavToggle .btnToggle{
+    text-align: center;
+    vertical-align: middle;
+    cursor:pointer;
+    width:24px;
+    height:24px;
+    border-radius:12px;
+    position: absolute;
+    top:0;
+    left:50%;
+    margin-left: -12px;
+}
+
+/*右边内容*/
+.right-content{
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    box-shadow: 4px 4px #4f7a9b inset;
+    padding:0 15px 0 12px;
+    background-color: #FFF;
+    border-top-left-radius:5px;
+}
+.lujing{
+    position: relative;
+    padding-left: 28px;
+    height:72px;
+    border-bottom:1px solid #e2e2e2;
+    margin-bottom: 12px;
+    padding-top: 25px;
+}
+.lujing .jiantou{
+    color:#a1a1a1;
+    padding:0 12px;
+}
+.lujing .zhucaidan{
+    color:#85b0cd;
+    font-size:18px;
+}
+
+.lujing .zicaidan{
+    color: #555;
+    font-size:12px;
+
+}
+.lujing .search{
+    position: absolute;
+    right: 0;
+    top: 25px;
+    z-index:1;
+}
+.lujing .search img{
+    position: absolute;
+    cursor:pointer;
+    right:325px;
+    top:6px;
+    z-index:5;
+}
+
+.lujing .search input{
+    border-radius:5px !important;
+    height:28px;
+    width:350px;
+    padding-left: 37px;
+}
+.handleBtn{
+    margin:15px 0;
+    position:relative;
+}
+.handleBtn .btnRight{
+    position: absolute;
+    top:0;
+    right:0;
+}
+.totalPage{
+    float:left;
+    margin-top:20px;
+    width:50px;
+    height:34px;
+    line-height:34px;
+}
+.right-content .fixedThead{
+    height:40px;position:fixed;background-color:#FFF;display:none;
+}
+.right-content .tableDiv{
+    overflow:auto;
+}
+.right-content .myTable td,.right-content .myTable th{
+    text-align: center;
+}
+.right-content .myTable .w65{
+    width:65px;
+}
+.right-content .myTable .w65 label{
+    margin-bottom: 0;
+}
+.loading {
+    padding-left:19px;
+    width:120px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: 0 0 0 -50px;
+    color: #3e8f3e;
+    z-index:1100;
+    background: url("../img/loading.gif") no-repeat left center;
+}
+.result{
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    margin-left: -35px;
+    color: #FF4351;
+    z-index:1101;
+}
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+legend {
+	padding: 7px;
+	margin-left: 10px;
+}
+
+.left_nav .drop-down {
+	background: #cce0eb;
+}
+
+.left_nav .drop-down a {
+	background: url('../img/arrow02.png') no-repeat center right;
+	color: #5d7f93;
+}
+
+.left_nav .close-up {
+	background: url('../img/bg01.png');
+}
+
+.left_nav .close-up a {
+	background: url('../img/arrow01.png') no-repeat center right;
+	color: #FFF;
+}

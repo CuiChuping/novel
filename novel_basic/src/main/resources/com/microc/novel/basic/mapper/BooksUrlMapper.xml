@@ -1,0 +1,24 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.microc.novel.basic.mapper.BooksUrlMapper">
+
+	<select id="list" resultType="com.microc.novel.basic.model.BooksUrl">
+		select * from books_url;
+	</select>
+	
+	<select id="findById" resultType="com.microc.novel.basic.model.BooksUrl">
+		select * from books_url where id = #{id};
+	</select>
+	
+	<insert id="insert">
+		insert into books_url values(#{id}, #{name}, #{url});
+	</insert>
+	
+	<update id="update">
+		update books_url set name = #{name}, url = #{url} where id = #{id};
+	</update>
+	
+	<delete id="delete">
+		delete from books_url where id = #{id};
+	</delete>
+	
+</mapper> 

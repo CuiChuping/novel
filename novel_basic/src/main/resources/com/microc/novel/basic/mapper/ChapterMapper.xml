@@ -1,0 +1,41 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.microc.novel.basic.mapper.ChapterMapper">
+	
+	<insert id="insert">
+		insert into t_chapter values(#{id}, #{name}, #{bookId}, #{position}, #{length}, #{index});
+	</insert>
+	
+	<delete id="delete">
+		delete from t_chapter where id = #{id};
+	</delete>
+	
+	<update id="update">
+		update t_chapter
+		<set>
+			`name` = #{name}, 
+			`book_id` = #{bookId}, 
+			`position` = #{position}, 
+			`length` = #{length}, 
+			`index` = #{index}
+		</set>
+		<where>
+			id = #{id}
+		</where>
+	</update>
+	
+	<select id="findById" resultType="com.microc.novel.basic.model.db.DBChapter">
+		select id, name, book_id as bookId, position, length, `index` from t_chapter where id = #{id}
+	</select>
+	
+	<select id="listByBooks" resultType="com.microc.novel.basic.model.db.DBChapter">
+		select id, name, book_id as bookId, position, length, `index` from t_chapter
+			<if test="bookId != null">
+				where book_id = #{bookId}
+			</if>
+		order by `index`
+		<if test="skip != null and length != null">
+			limit #{skip}, #{length}
+		</if>
+	</select>
+	
+</mapper> 

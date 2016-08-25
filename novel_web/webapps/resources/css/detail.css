@@ -1,0 +1,92 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#bg_detail {
+	width: 100%;
+	height: 100px;
+	background-repeat: repeat;
+	background-size: cover;
+	-webkit-filter: blur(10px);
+	position: absolute;
+}
+
+#detail {
+	margin: 15px 10px;
+}
+
+#detail .head {
+	color: #000;
+	text-shadow: 0px 0px 5px white;
+}
+
+#detail .head .image {
+	float: left;
+	width: 30%;
+}
+
+#detail .head .image img {
+	width: 100%;
+}
+
+#detail .head .detail {
+	float: left;
+	width: 70%;
+	height: 100%;
+	padding-left: 10px;
+	overflow: auto;
+}
+
+#detail .head .detail span {
+	font-family: "宋体";
+}
+
+#detail .head .detail #booksName {
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 30px;
+}
+
+#detail .head .detail #categoryName {
+	margin-left: 5px;
+	font-size: 12px;
+	color: white;
+	text-shadow: 0px 0px 5px black;
+	line-height: 20px;
+}
+
+#detail .head .detail #author {
+	font-size: 14px;
+	color: white;
+	line-height: 20px;
+	text-shadow: 0px 0px 5px black;
+}
+
+#detail .head .detail #word {
+	font-size: 12px;
+	color: white;
+	line-height: 20px;
+	text-shadow: 0px 0px 5px black;
+}
+
+#detail .head .detail #desc {
+	font-size: 13px;
+	color: #000;
+	line-height: 20px;
+}
+
+.button-group {
+	text-align: center;
+	padding-top: 10px;
+}
+
+.button-group .btn-inline-block {
+	display: inline-block;
+    width: 28%;
+    padding: 8px 0;
+    margin: 0 5px;
+    font-size: 15px;
+}
+
+

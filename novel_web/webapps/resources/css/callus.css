@@ -1,0 +1,59 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#contectWay {
+	padding-top: 6px;
+	padding-bottom: 6px;
+	margin-left: 10px;
+	font-size: 14px;
+}
+
+.item_image {
+	width: 32px;
+	height: 32px;
+	margin: -4px 0;
+}
+
+#qq_number {
+	line-height: 24px;
+	font-size: 14px;
+}
+
+.call {
+  position: relative;
+  padding: 11px 15px 11px 15px;
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+}
+
+#publicNum {
+	font-size: 13px;
+	color: #7f9b95;
+	margin-bottom: 11px;
+}
+
+#findPublic {
+	font-size: 15px;
+	padding-bottom: 10px;
+}
+
+#publicFind {
+	font-size: 14px;
+	color: #7f9b95;
+}
+
+#erweima {
+	margin-top: 5px;
+	margin-left: 25%;
+	border: 1px solid #bdaaaa;
+}
+
+#erweimaplu {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 3%;
+	width: 90%;
+	border: 1px solid #bdaaaa;
+}

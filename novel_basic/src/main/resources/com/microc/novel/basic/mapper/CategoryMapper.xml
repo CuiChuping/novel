@@ -1,0 +1,34 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.microc.novel.basic.mapper.CategoryMapper">
+	
+	<insert id="insert">
+		insert into t_category values(#{id}, #{name}, #{index}, #{url});
+	</insert>
+	
+	<delete id="delete">
+		delete from t_category where id = #{id};
+	</delete>
+	
+	<update id="update">
+		update t_category
+		<set>
+			name = #{name}, `index` = #{index}, `url` = #{url}
+		</set>
+		<where>
+			id = #{id}
+		</where>
+	</update>
+	
+	<select id="findById" resultType="com.microc.novel.basic.model.db.DBCategory">
+		select * from t_category where id = #{id}
+	</select>
+	
+	<select id="findByName" resultType="com.microc.novel.basic.model.db.DBCategory">
+		select * from t_category where name = #{name}
+	</select>
+	
+	<select id="list" resultType="com.microc.novel.basic.model.db.DBCategory">
+		select * from t_category order by `index` desc;
+	</select>
+	
+</mapper> 

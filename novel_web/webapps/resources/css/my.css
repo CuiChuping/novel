@@ -1,0 +1,58 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.my_photo {
+	width: 100%;
+	height: 40%;
+	background-color: green;
+	position: absolute;
+	text-align: center;
+	
+}
+
+.personicon {
+	margin-top: 14%;
+	margin-bottom: 30%;
+}
+
+.my_photo > .icon {
+	font-size: 45px;
+	color: white;
+}
+
+.my_login {
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	
+}
+
+.my_login > .btn-positive {
+	margin-top: 30%;
+}
+
+.my_center {
+	padding-top: 70%;
+}
+
+.icon-gear{
+	color: #523131;
+}
+
+.icon-compose {
+	color: #1148a5;
+}
+
+.icon-info {
+	color: #820591;
+}
+
+.icon-home {
+	color: #e3a415;
+}
+
+.table-view-cell>a:not(.btn) {
+  margin: -2% -25% -2% -5%;
+}
